@@ -8,7 +8,7 @@ Meet expection for our univesity OOP classes
 Decided to use Object Pascal ([Free Pascal](https://www.freepascal.org/) with [Lazurus](https://www.lazarus-ide.org/))
 
 You may cosider it as some sophisticated form of sadomasochism (sado- as I wish to implement 
-this project with this old-fashioned language, maso- as I wish my collega mate make it too), but that's not true.
+this project with this old-fashioned language, maso- as I wish my college mate make it too), but that's not true.
 
 Frakly speaking, I wish to pay homage and make deep obeisance for my first language I got acquitanted with :computer:. It was not 
 only beginning with my programming adventure, but this language got me enchanted with making software which suppose to 
