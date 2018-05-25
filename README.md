@@ -18,7 +18,7 @@ programming world so this code was shitty as hell :ok_woman:.
 In fact today I'm learning this language from scratch as I forgot hardly everything :cry:.
 
 # Installation and running
-Simple follow [this guide](https://www.lazarus-ide.org/index.php) in order to set up environment.
+Simple follow [guides on this page](https://www.lazarus-ide.org/index.php) in order to set up environment.
 
 If you wish to run... well... I didn't manage to do it properly in my OSX so
 I click the green button on IDE and consider it as fairly enough for this project :smile:
