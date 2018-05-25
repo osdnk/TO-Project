@@ -1,0 +1,27 @@
+object GraphicalInterface: TGraphicalInterface
+  Left = 240
+  Height = 240
+  Top = 210
+  Width = 320
+  Caption = 'GraphicalInterface'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.8.4.0'
+  object Button1: TButton
+    Left = 64
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 176
+    Height = 22
+    Top = 72
+    Width = 80
+    TabOrder = 1
+    Text = 'Edit1'
+  end
+end
