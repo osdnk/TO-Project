@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, GUI, Hashable, hashAlgorithm1
+  Forms, GUI, Hashable, hashAlgorithm1, FileHandler, FileComparator
   { you can add units after this };
 
 {$R *.res}

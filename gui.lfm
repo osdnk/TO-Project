@@ -1,27 +1,70 @@
 object GraphicalInterface: TGraphicalInterface
-  Left = 240
-  Height = 240
-  Top = 210
-  Width = 320
+  Left = 311
+  Height = 270
+  Top = 200
+  Width = 657
   Caption = 'GraphicalInterface'
-  ClientHeight = 240
-  ClientWidth = 320
+  ClientHeight = 270
+  ClientWidth = 657
   LCLVersion = '1.8.4.0'
-  object Button1: TButton
-    Left = 64
+  object CalcButton: TButton
+    Left = 56
     Height = 25
-    Top = 72
+    Top = 75
     Width = 75
-    Caption = 'Button1'
-    OnClick = Button1Click
+    Caption = 'Calc'
+    OnClick = CalcButtonClick
     TabOrder = 0
   end
   object Edit1: TEdit
-    Left = 176
+    Left = 160
     Height = 22
-    Top = 72
-    Width = 80
+    Top = 75
+    Width = 272
+    Enabled = False
     TabOrder = 1
-    Text = 'Edit1'
+  end
+  object FileSelectButton: TButton
+    Left = 56
+    Height = 25
+    Top = 131
+    Width = 75
+    Caption = 'Select File'
+    OnClick = FileSelectButtonClick
+    TabOrder = 2
+  end
+  object FileLabel: TLabel
+    Left = 168
+    Height = 16
+    Top = 136
+    Width = 55
+    Caption = 'FileLabel'
+    ParentColor = False
+  end
+  object SaveButton: TButton
+    Left = 472
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Save'
+    OnClick = SaveButtonClick
+    TabOrder = 3
+  end
+  object ComprareWithButton: TButton
+    Left = 472
+    Height = 25
+    Top = 88
+    Width = 112
+    Caption = 'Comprare with...'
+    OnClick = ComprareWithButtonClick
+    TabOrder = 4
+  end
+  object OpenDialog1: TOpenDialog
+    left = 148
+    top = 208
+  end
+  object SaveDialog1: TSaveDialog
+    left = 234
+    top = 204
   end
 end
