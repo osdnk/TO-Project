@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Hashable, FileHandler;
 
 type
-THashAlgorithm1 = class (TInterfacedObject, IMyDelegate)
+THashAlgorithm1 = class (TInterfacedObject, IHashable)
     function MakeHash (path: string):string;
     private
       function Invert(N:integer; word: string): string;

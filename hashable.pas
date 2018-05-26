@@ -4,7 +4,7 @@ unit Hashable;
 
 interface
 type
-  IMyDelegate = interface
+  IHashable = interface
    function MakeHash (path: string): string;
   end;
 
