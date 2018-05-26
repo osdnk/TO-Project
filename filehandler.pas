@@ -11,7 +11,7 @@ type
   private
     F : Text;
   public
-    function readFirstLineOfFile(): string;
+    function ReadFirstLineOfFile(): string;
     Constructor Create(path : string); overload;
 end;
 
@@ -20,21 +20,20 @@ implementation
   begin
     AssignFile(self.F,path);
   end;
-  function TFileHandler.readFirstLineOfFile(): string;
+  function TFileHandler.ReadFirstLineOfFile(): string;
   var
     Line: String;
   begin
     Reset(self.F);
-    if not eof(self.F) then
+    if not EOF(self.F) then
     begin
       ReadLn(self.F,Line);
-      readFirstLineOfFile := Line;
+      ReadFirstLineOfFile := Line;
     end
     else
     begin
-      readFirstLineOfFile := '';
+      ReadFirstLineOfFile := '';
     end;
   end;
-
 end.
 

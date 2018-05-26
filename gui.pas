@@ -32,8 +32,8 @@ type
   end;
 
 var
-  filename: string;
-  hashed: string;
+  FileName: string;
+  Hashed: string;
   GraphicalInterface: TGraphicalInterface;
 
 implementation
@@ -47,8 +47,8 @@ var
   HashAlgorithm1: THashAlgorithm1;
 begin
   HashAlgorithm1 := Default(THashAlgorithm1);
-  hashed := HashAlgorithm1.makeHash(filename);
-  Edit1.Text := hashed;
+  Hashed := HashAlgorithm1.MakeHash(filename);
+  Edit1.Text := Hashed;
 end;
 
 procedure TGraphicalInterface.ComprareWithButtonClick(Sender: TObject);
@@ -58,9 +58,9 @@ var
 begin
   if OpenDialog1.Execute then
   begin
-    CurrentFileName := OpenDialog1.Filename;
+    CurrentFileName := OpenDialog1.FileName;
     FileComparator := TFileComparator.Create(CurrentFileName);
-    if FileComparator.ComprareWith(hashed) then
+    if FileComparator.ComprareWith(Hashed) then
     begin
       ShowMessage('Same!');
     end
@@ -75,8 +75,8 @@ procedure TGraphicalInterface.FileSelectButtonClick(Sender: TObject);
 begin
   if OpenDialog1.Execute then
   begin
-    filename := OpenDialog1.Filename;
-    FileLabel.Caption:=filename;
+    filename := OpenDialog1.FileName;
+    FileLabel.Caption:=FileName;
   end;
 end;
 
@@ -84,9 +84,9 @@ procedure TGraphicalInterface.SaveButtonClick(Sender: TObject);
 var
   SText: TStringlist;
 begin
-  SText:= TStringlist.create;
+  SText:= TStringlist.Create;
   SaveDialog1.FileName := 'sample.txt';
-  if SaveDialog1.execute then
+  if SaveDialog1.Execute then
   begin
     SText.Add(Edit1.Text);
     SText.SaveToFile(SaveDialog1.FileName);

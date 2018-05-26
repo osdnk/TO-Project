@@ -21,7 +21,7 @@ implementation
   end;
   function TFileComparator.ComprareWith(word: string): boolean;
   begin
-    ComprareWith := self.FH.readFirstLineOfFile() = word;
+    ComprareWith := self.FH.ReadFirstLineOfFile() = word;
   end;
 end.
 
