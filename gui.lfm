@@ -1,7 +1,7 @@
 object GraphicalInterface: TGraphicalInterface
-  Left = 311
+  Left = 24
   Height = 270
-  Top = 200
+  Top = 185
   Width = 657
   Caption = 'GraphicalInterface'
   ClientHeight = 270
