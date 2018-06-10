@@ -5,12 +5,11 @@ module Solution
   , ControlSum(..)
   ) where
 
-import Data.Char (ord)
-import System.IO
+import           System.IO
 
 data File = File
-  { handle :: IO Handle
-  , check_sum :: IO Int
+  { handle   :: IO Handle
+  , checkSum :: IO Int
   , strategy :: File -> IO Int
   }
 
@@ -25,7 +24,7 @@ instance FileType File where
     File
       (openFile path ReadMode)
       (return (-1) :: IO Int)
-      (\x -> return (-1) :: IO Int)
+      (\_ -> return (-1) :: IO Int)
 
 class Hashable t where
   calculate_control_sum :: t -> IO Int
@@ -38,9 +37,9 @@ class ControlSum t where
   equals_ :: t -> t -> IO Bool
 
 instance ControlSum File where
-  equals file sum = do
+  equals file asum = do
     csum <- calculate_control_sum file
-    return $ csum == sum
+    return $ csum == asum
   equals_ f1 f2 = do
     csum1 <- calculate_control_sum f1
     csum2 <- calculate_control_sum f2

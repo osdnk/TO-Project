@@ -1,24 +1,17 @@
 module Main where
 
-import Control.Monad
-import Control.Monad.IO.Class
-import Data.IORef
-import Examples
-import Graphics.UI.Gtk
-import Graphics.UI.Gtk.Gdk.EventM
-import qualified Graphics.UI.Gtk.Gdk.Events as E
-import Solution
+import           Control.Monad.IO.Class
+import           Examples
+import           Graphics.UI.Gtk
+import           Solution
 
-import Control.Monad.Trans
-
-check_sum :: String -> String -> IO Bool
-check_sum p1 p2 = do
+checkSum :: String -> String -> IO Bool
+checkSum p1 p2 = do
   let f1 = create_file p1
-  f1_s <- set_strategy f1 example_strategy
+  f1_s <- set_strategy f1 exampleStrategy
   let f2 = create_file p2
-  f2_s <- set_strategy f2 example_strategy
-  res <- equals_ f1_s f2_s
-  return res
+  f2_s <- set_strategy f2 exampleStrategy
+  equals_ f1_s f2_s
 
 calcSumHandler :: FileChooser -> Entry -> IO ()
 calcSumHandler choose_file result = do
@@ -26,9 +19,9 @@ calcSumHandler choose_file result = do
   file <-
     case path of
       Just x -> return $ create_file x
-  file_2 <- set_strategy file example_strategy
-  check_sum <- calculate_control_sum file_2
-  entrySetText result $ show check_sum
+  file_2 <- set_strategy file exampleStrategy
+  checkSum_res <- calculate_control_sum file_2
+  entrySetText result $ show checkSum_res
 
 checkSumHandler :: FileChooser -> FileChooser -> Entry -> IO ()
 checkSumHandler choose_file_1 choose_file_2 result = do
@@ -36,12 +29,12 @@ checkSumHandler choose_file_1 choose_file_2 result = do
   file_1 <-
     case path_1 of
       Just x -> return $ create_file x
-  file_1_2 <- set_strategy file_1 example_strategy
+  file_1_2 <- set_strategy file_1 exampleStrategy
   path_2 <- fileChooserGetFilename choose_file_2
   file_2 <-
     case path_2 of
       Just x -> return $ create_file x
-  file_2_2 <- set_strategy file_2 example_strategy
+  file_2_2 <- set_strategy file_2 exampleStrategy
   equals_result <- equals_ file_1_2 file_2_2
   entrySetText result $ show equals_result
 
