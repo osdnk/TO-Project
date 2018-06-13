@@ -22,7 +22,7 @@ instance FileType File where
     return $ File (handle file) (strategy_fun file) strategy_fun
   create_file path =
     File
-      (openFile path ReadMode)
+      (openBinaryFile path ReadMode)
       (return (-1) :: IO Int)
       (\_ -> return (-1) :: IO Int)
 

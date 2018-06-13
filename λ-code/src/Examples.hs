@@ -1,12 +1,13 @@
 module Examples
-  ( exampleStrategy
-  ) where
+        ( exampleStrategy
+        )
+where
 
-import           Data.Char (ord)
+import           Data.Char                      ( ord )
 import           Solution
 import           System.IO
 
 exampleStrategy :: File -> IO Int
 exampleStrategy file = do
-  content <- hGetContents =<< handle file
-  return $ (sum . map ord) content
+        content <- hGetContents =<< handle file
+        return $ (sum . map ord) content
